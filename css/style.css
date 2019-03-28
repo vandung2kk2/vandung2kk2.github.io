@@ -195,7 +195,7 @@ input[type='checkbox']:checked ~ .textQuests{
 	position:fixed;
 	width:30%;
 	height:30%;
-	display:grid;
+	display:none;
 	grid-template-rows:auto 50px;
 	box-shadow:2px 5px 30px 1px #ddd;
 	z-index: 14;
