@@ -54,10 +54,11 @@ function inra(){
 }
 setTimeout(inra,1000);
 setInterval(inra,18000);
+var x=document.getElementById('notifications');
 function closeNotice(){
-	var x=document.getElementById('notifications');
 	x.style.opacity = 0;
 	setTimeout(function(){
 		x.stle.display = 'none';
 	},200)
 }
+setTimeout(function(){x.style.display='grid'},120000);
