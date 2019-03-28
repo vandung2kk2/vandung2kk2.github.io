@@ -36,12 +36,24 @@ body::-webkit-scrollbar-thumb:hover{
 	display:none;
 	animation:hiddenMenu .2s forwards;
 }
+#hiddenMenu ul li{
+	color:#ccc;
+	cursor:pointer;
+	height:50px;
+	font-weight:500;
+}
+#hiddenMenu ul li:hover{
+	color:#26bee2
+}
+#hiddenMenu ul{
+	list-style:none;
+}
 @keyframes hiddenMenu{
 	0%{
 		opacity:0;
 	}
 	100%{
-		opacity:.93;
+		opacity:.97;
 	}
 }
 @keyframes closeHiddenMenu{
@@ -197,7 +209,7 @@ input[type='checkbox']:checked ~ .textQuests{
 	height:30%;
 	display:none;
 	grid-template-rows:auto 50px;
-	box-shadow:2px 5px 30px 1px #ddd;
+	box-shadow:2px 2px 15px rgba(0,0,0,0.16);
 	z-index: 14;
 	background:#fff;
 	padding:40px 20px 10px 20px;
