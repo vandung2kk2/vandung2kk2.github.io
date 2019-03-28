@@ -54,3 +54,10 @@ function inra(){
 }
 setTimeout(inra,1000);
 setInterval(inra,18000);
+function closeNotice(){
+	var x=document.getElementById('notifications');
+	x.style.opacity = 0;
+	setTimeout(function(){
+		x.stle.display = 'none';
+	},200)
+}
