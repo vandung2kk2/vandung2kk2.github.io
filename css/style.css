@@ -1,1 +1,209 @@
+body{
+	margin:0;
+	padding:0;
+	font-family:'segoe ui';
+	font-weight:lighter;
+	color:#111;
+}
+body::-webkit-scrollbar{
+	width:10px;
+	background:#eee;
+}
+body::-webkit-scrollbar:hover{
+	background:#ddd;
+}
+body::-webkit-scrollbar-thumb{
+	background:#999;
+	border-radius:10px;
+}
+body::-webkit-scrollbar-thumb:hover{
+	background:#555;
+}
+*::selection{
+	background:#26bee2;
+	color:#fff;
+}
+#hiddenMenu{
+	position:fixed;
+	background:#111;
+	width:100%;
+	height:100%;
+	z-index:12;
+	display:none;
+	animation:hiddenMenu .2s forwards;
+}
+@keyframes hiddenMenu{
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:.93;
+	}
+}
+@keyframes closeHiddenMenu{
+	100%{
+		opacity:0;
+	}
+}
+#text{
+	padding:60px 110px 20px 110px;
+	font-size:50px;
+	height:67px;
+}
+#menu{
+	position:sticky;
+	top:0;
+	background:#fff;
+	z-index:10;
+	padding:60px 100px;
+	user-select:none;
+}
+#menu > div{
+	display:inline;
+	cursor:pointer;
+	padding:16px 10px;
+	margin-right:20px;
+	position:relative;
+	font-weight:500;
+	color:#444;
+	transition:.17s;
+}
+#menu > div a{
+	color:inherit;
+	text-decoration:none;
+}
+#menu .hasSub{
+	display:inline;
+}
+#menu > div:hover .submenu{
+	display:inline-block;
+}
+.submenu{
+	display:none;
+	width:300px;
+	background:#fff;
+	position:absolute;
+	top:35px;
+	left:0;
+	box-shadow:1px 5px 23px -5px #ccc;
+	animation:submenu .18s forwards;
+	opacity:0;
+	z-index:11;
+}
+@keyframes submenu{
+	100%{
+		top:60px;
+		opacity:1;
+	}
+}
+.submenu div{
+	padding:8px 15px;
+	font-size:18px;
+	color:#666;
+	transition:.15s;
+}
+.submenu div:hover{
+	color:#23aaca;
+	padding-left:25px;
+}
+.active{
+	box-shadow:0 0 30px -12px #999;
+}
+.homePage:hover{
+	color:#00a8ff !important;
+}
+.program:hover .hasSub{
+	color:#f55 !important;
+}
+.softwares:hover{
+	color:#17c755c0 !important;
+}
+.contact:hover{
+	color:#9025f3 !important;
+}
+#more{
+	float:right;
+	position:relative;
+	top:-16px;
+}
+#search,#openMenu,#hiddenMenu::after{
+	display:inline-block;
+	width:30px;
+	height:30px;
+	background:url('../web_logo_black.png');
+	background-size:cover;
+	background-position:calc(-30*5px);
+}
+#close{
+	position:absolute;
+	right:20px;
+	top:20px;
+	background:url('../web_logo_white.png');
+	z-index:13;
+	cursor:pointer;
+	width:30px;
+	height:30px;
+	background-size:cover;
+	background-position:calc(-30*3px);
+}
+#openMenu{
+	background-position:0;
+	display:none;
+}
+#content{
+	padding:0 110px 20px 110px;
+}
+#content h3{
+	font-weight:500;
+	color:#26bee2;
+}
+.firstPart{
+	color:#26bee2;
+}
+.furtherQuests{
+	font-weight:500;
+	cursor:pointer;
+	padding:10px;
+	user-select: none;
+	transition:.17s;
+	border-radius:4px;
+}
+.furtherQuests:hover{
+	background:#dddddd90;
+}
+.textQuests{
+	padding-left:20px;
+	display:none;
+	font-weight:500;
+	font-size:18px;
+}
+.textQuests p{
+	font-size:19px;
+	color:#26bee2;
+}
+input[type='checkbox']{
+	display:none;
+}
+input[type='checkbox']:checked ~ .textQuests{
+	display:block;
+}
 
+
+@media all and (max-width : 850px){
+	#menu,#content,#text{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	body{
+		font-size:20px;
+	}
+}
+@media all and (max-width : 705px){
+	#menu,#content,#text{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	body{
+		font-size:22px;
+	}
+}
