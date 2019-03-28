@@ -58,7 +58,15 @@ var x=document.getElementById('notifications');
 function closeNotice(){
 	x.style.opacity = 0;
 	setTimeout(function(){
-		x.stle.display = 'none';
+		x.style.display = 'none';
 	},200)
 }
 setTimeout(function(){x.style.display='grid'},120000);
+var pos = [150,800,1457,1994,2435,3010,3595,4017,4410,4842,5254,5638];
+var lists = document.querySelectorAll('#hiddenMenu li');
+for(let i=0; i<12; i++){
+	lists[i].addEventListener('click',function(){
+		window.scrollTo(0,pos[i]);
+		hiddenMenu.style.display = 'none'
+	})
+}
