@@ -41,6 +41,7 @@ body::-webkit-scrollbar-thumb:hover{
 	cursor:pointer;
 	height:50px;
 	font-weight:500;
+	font-size:1em
 }
 #hiddenMenu ul li:hover{
 	color:#26bee2
@@ -63,7 +64,7 @@ body::-webkit-scrollbar-thumb:hover{
 }
 #text{
 	padding:60px 110px 20px 110px;
-	font-size:50px;
+	font-size:2.5em;
 	height:67px;
 }
 #menu{
@@ -87,6 +88,7 @@ body::-webkit-scrollbar-thumb:hover{
 #menu > div a{
 	color:inherit;
 	text-decoration:none;
+	font-size:1em
 }
 #menu .hasSub{
 	display:inline;
@@ -240,6 +242,10 @@ input[type='checkbox']:checked ~ .textQuests{
 	padding:10px;
 	text-align: center;
 	cursor:pointer;
+}
+pre{
+	font-size:1.1em;
+	
 }
 
 @media all and (max-width : 850px){
