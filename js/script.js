@@ -70,3 +70,6 @@ for(let i=0; i<12; i++){
 		hiddenMenu.style.display = 'none'
 	})
 }
+if(window.innerHeight < window.innerWidth){
+	window.location = "https://github.com/vandung2kk2/Tinhoc11/blob/master/Tin%20hoc%2011";
+}
