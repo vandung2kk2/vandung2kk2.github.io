@@ -90,6 +90,10 @@ End.
 		<div class='textQuests'>
 			<p>Tại sao lại cần dùng vòng lặp while ở cuối ?</p>
 			> Để tránh trường hợp có các phần tử giống nhau
+			<p>Biến t dùng làm gì ?</p>
+			> Để tráo đổi giá trị A[i] và A[j]
+			<p>Tại sao khai báo i kiểu byte ?</p>
+			> Chiều dài mảng lớn nhất là 250
 		</div>
 		<h3 id='b2'>TÌM SỐ BÉ THỨ 2 TRONG DÃY</h3>
 		<PRE>
@@ -128,6 +132,10 @@ End.
 		<div class='textQuests'>
 			<p>Tại sao lại cần dùng vòng lặp while ở cuối ?</p>
 			> Để tránh trường hợp có các phần tử giống nhau
+			<p>Biến t dùng làm gì ?</p>
+			> Để tráo đổi giá trị A[i] và A[j]
+			<p>Tại sao khai báo i kiểu byte ?</p>
+			> Chiều dài mảng lớn nhất là 250
 		</div>
 		<h3 id='b3'>TÍNH VÀ TIN RA TỔNG CÁC SỐ CHIA HẾT CHO SỐ NGUYÊN K</h3>
 		<pre>
@@ -153,6 +161,12 @@ Begin
     readln;
 End.
 		</pre>
+		<div class='textQuests'>
+			<p>mod dùng làm gì</p>
+			> chia lấy phần dư, xem có chia hết không
+			<p>Tại sao khai báo i kiểu byte ?</p>
+			> Chiều dài mảng lớn nhất là 250
+		</div>
 		<h3 id='b4'>TÍNH VÀ IN RA TỔNG BÌNH PHƯƠNG CÁC SỐ ÂM</h3>
 		<pre>
 Var A:array[0..250] of integer;
@@ -174,6 +188,10 @@ Begin
     readln;
 End.
 		</pre>
+		<div class='textQuests'>
+			<p>Tại sao khai báo i kiểu byte ?</p>
+			> Chiều dài mảng lớn nhất là 250
+		</div>
 		<h3 id='b5'>SẮP XẾP DÃY THEO THỨ TỰ TĂNG DẦN</h3>
 		<pre>
 Var A:array[0..250] of integer;
@@ -201,6 +219,16 @@ Begin
     readln;
 End.
 		</pre>
+		<div class='textQuests'>
+			<p>Biến t dùng làm gì ?</p>
+			> Tráo đổi giá trị A[i] và A[j]
+			<p>Muốn đổi thành sắp xếp nhỏ đến lớn thì làm tn ?</>
+			> Đổi dấu < trong câu lệnh "if A[j] < A[i] then" thành >
+			<p>Tại sao khai báo i kiểu byte ?</p>
+			> Chiều dài mảng lớn nhất là 250
+			<p>:5 trong câu lệnh write cuối để làm gì ?</p>
+			> In ra các số có khoảng cách
+		</div>
 		<h3 id='b6'>SẮP XẾP DÃY THEO THỨ TỰ GIẢM DẦN</h3>
 		<pre>
 Var A:array[0..250] of integer;
@@ -228,6 +256,16 @@ Begin
     readln;
 End.
 		</pre>
+		<div class='textQuests'>
+			<p>Biến t dùng làm gì ?</p>
+			> Tráo đổi giá trị A[i] và A[j]
+			<p>Muốn đổi thành sắp xếp nhỏ đến lớn thì làm tn ?</>
+			> Đổi dấu > trong câu lệnh "if A[j] > A[i] then" thành <
+			<p>Tại sao khai báo i kiểu byte ?</p>
+			> Chiều dài mảng lớn nhất là 250
+			<p>:5 trong câu lệnh write cuối để làm gì ?</p>
+			> In ra các số có khoảng cách
+		</div>
 		<h3 id='b7'>ĐẾM SỐ KÍ TỰ h CÓ TRONG XÂU</h3>
 		<pre>
 Var str:string;
@@ -326,6 +364,8 @@ End.
 			> Chính là độ dài xâu nhập vào, tránh mỗi lần lặp lại phải tìm chiều dài xâu.
 			<p>Hàm upcase dùng để làm gì ?</p>
 			> Chuyển các kí tự thành in hoa
+			<p>Câu lệnh clrscr để làm gì ?</p>
+			> Xóa sạch màn hình
 		</div>
 		<h3 id='b11'>IN RA XÂU S VỚI CÁC KÍ TỰ IN THƯỜNG</h3>
 		<pre>
@@ -354,6 +394,8 @@ End.
 			> Chính là độ dài xâu nhập vào, tránh mỗi lần lặp lại phải tìm chiều dài xâu.
 			<p>Hàm lowercase dùng để làm gì ?</p>
 			> Chuyển các kí tự thành in thường
+			<p>Câu lệnh clrscr để làm gì ?</p>
+			> Xóa sạch màn hình
 		</div>
 		<h3 id='b12'>ĐẾM SỐ KÍ TỰ KHÁC DẤU CÁCH TRONG XÂU</h3>
 		<pre>
@@ -366,7 +408,7 @@ Begin
     len:=length(s);
     dem:=0;
     for i:=1 to len do
-    	if s[i]!=' ' then
+    	if s[i]<>' ' then
 		dem++
     clrscr;
     writeln('co ',dem,'ki tu khac dau cach trong xau');
@@ -382,6 +424,8 @@ End.
 		<div class='textQuests'>
 			<p>Biến 'len' dùng để làm gì ?</p>
 			> Chính là độ dài xâu nhập vào, tránh mỗi lần lặp lại phải tìm chiều dài xâu.
+			<p>Câu lệnh clrscr để làm gì ?</p>
+			> Xóa sạch màn hình
 		</div>
 	</div>
 	<script src='js/script.js'></script>
