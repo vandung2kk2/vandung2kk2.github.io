@@ -266,3 +266,12 @@ pre{
 		font-size:22px;
 	}
 }
+media all and (min-width: 1900px){
+	*{font-size:1.3em}
+	#text{
+		font-size:3em;
+	}
+	#menu > div a{
+		font-size:1.2em;
+	}
+}
