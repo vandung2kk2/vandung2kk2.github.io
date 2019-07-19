@@ -1,277 +1,150 @@
 body{
 	margin:0;
 	padding:0;
-	font-family:'quicksand';
-	font-weight:lighter;
-	color:#111;
 }
-a{
-	color:inherit;
-	text-decoration: none
+*{
+	font-family:"segoe ui";
+	font-size:22px;
+	color:#444;
 }
-body::-webkit-scrollbar{
-	width:10px;
-	background:#eee;
-}
-body::-webkit-scrollbar:hover{
-	background:#ddd;
-}
-body::-webkit-scrollbar-thumb{
-	background:#999;
-	border-radius:10px;
-}
-body::-webkit-scrollbar-thumb:hover{
-	background:#555;
-}
-*::selection{
-	background:#26bee2;
-	color:#fff;
-}
-#hiddenMenu{
-	position:fixed;
-	background:#111;
-	width:100%;
-	height:100%;
-	z-index:12;
-	display:none;
-	animation:hiddenMenu .2s forwards;
-}
-#hiddenMenu ul li{
-	color:#ccc;
-	cursor:pointer;
-	height:50px;
-	font-weight:500;
-	font-size:1em
-}
-#hiddenMenu ul li:hover{
-	color:#26bee2
-}
-#hiddenMenu ul{
-	list-style:none;
-}
-@keyframes hiddenMenu{
-	0%{
-		opacity:0;
-	}
-	100%{
-		opacity:.97;
-	}
-}
-@keyframes closeHiddenMenu{
-	100%{
-		opacity:0;
-	}
-}
-#text{
-	padding:60px 110px 20px 110px;
-	font-size:2.5em;
-	height:67px;
+#header{
+	padding:15px;
+	height:60px;
+	display:flex;
+	align-items:center;
+	font-size:50px;
+	color:#26bee2;
 }
 #menu{
+	background:#fff;
 	position:sticky;
 	top:0;
-	background:#fff;
-	z-index:10;
-	padding:60px 100px;
-	user-select:none;
+	display:flex;
 }
-#menu > div{
-	display:inline;
-	cursor:pointer;
-	padding:16px 10px;
-	margin-right:20px;
-	position:relative;
-	font-weight:500;
-	color:#444;
-	transition:.17s;
-}
-#menu > div a{
-	color:inherit;
+#menu a{
 	text-decoration:none;
-	font-size:1em
 }
-#menu .hasSub{
-	display:inline;
+.first a{
+	color:#333;
 }
-#menu > div:hover .submenu{
-	display:inline-block;
+#menu div{
+	padding:20px 15px;
+	text-align:center;
+	min-width:100px;
 }
-.submenu{
-	display:none;
-	width:300px;
-	background:#fff;
-	position:absolute;
-	top:35px;
-	left:0;
-	box-shadow:1px 5px 23px -5px #ccc;
-	animation:submenu .18s forwards;
-	opacity:0;
-	z-index:11;
-}
-@keyframes submenu{
-	100%{
-		top:60px;
-		opacity:1;
-	}
-}
-.submenu div{
-	padding:8px 15px;
-	font-size:18px;
-	color:#666;
-	transition:.15s;
-}
-.submenu div:hover{
-	color:#23aaca;
-	padding-left:25px;
+.first a:hover > div{
+	color:#26bee2;
 }
 .active{
-	box-shadow:0 0 30px -12px #999;
+	background:#26bee2cc !important;
+	box-shadow:0px 1px 15px rgba(0,0,0,.1)
 }
-.homePage:hover{
-	color:#00a8ff !important;
-}
-.program:hover .hasSub{
-	color:#f55 !important;
-}
-.softwares:hover{
-	color:#17c755c0 !important;
-}
-.contact:hover{
-	color:#9025f3 !important;
-}
-#more{
-	float:right;
-	position:relative;
-	top:-16px;
-}
-#search,#openMenu,#hiddenMenu::after{
-	display:inline-block;
-	width:30px;
-	height:30px;
-	background:url('../web_logo_black.png');
-	background-size:cover;
-	background-position:calc(-30*5px);
-}
-#close{
-	position:absolute;
-	right:20px;
-	top:20px;
-	background:url('../web_logo_white.png');
-	z-index:13;
-	cursor:pointer;
-	width:30px;
-	height:30px;
-	background-size:cover;
-	background-position:calc(-30*3px);
-}
-#openMenu{
-	background-position:0;
-	display:none;
-}
-#content{
-	padding:0 110px 20px 110px;
-}
-#content h3{
-	font-weight:500;
-	color:#26bee2;
-}
-.firstPart{
-	color:#26bee2;
-}
-.furtherQuests{
-	font-weight:500;
-	cursor:pointer;
-	padding:10px;
-	user-select: none;
-	transition:.17s;
-	border-radius:4px;
-}
-.furtherQuests:hover{
-	background:#dddddd90;
-}
-.textQuests{
-	padding-left:20px;
-	display:none;
-	font-weight:500;
-	font-size:18px;
-}
-.textQuests p{
-	font-size:19px;
-	color:#26bee2;
-}
-input[type='checkbox']{
-	display:none;
-}
-input[type='checkbox']:checked ~ .textQuests{
-	display:block;
-}
-#notifications{
-	position:fixed;
-	width:30%;
-	height:30%;
-	display:none;
-	grid-template-rows:auto 50px;
-	box-shadow:2px 2px 15px rgba(0,0,0,0.16);
-	z-index: 14;
-	background:#fff;
-	padding:40px 20px 10px 20px;
-	top:calc(50vh - 15% - 25px);
-	left:calc(50vw - 15% - 10px);
-	font-weight:500;
-	color:#444;
-	transition:.2s;
-	border-radius:4px;
-}
-#notifications > div:nth-child(2){
-	display:grid;
-	grid-template-columns:repeat(4, 1fr);
-}
-#yes{
+.active div{
 	color:#fff;
-	padding:10px;
-	background:#26bee2;
-	border-radius:4px;
-	cursor:pointer;
-	text-align: center;
+	transition:.15s;
 }
-#yes:hover{
-	background:#26bee2c9;
-}
-#no{
+.active a:hover > div{
+	color:#222;
 	background:#fff;
-	padding:10px;
-	text-align: center;
-	cursor:pointer;
-}
-pre{
-	font-size:1.1em;
-	
 }
 
-@media all and (max-width : 850px){
-	#menu,#content,#text{
-		padding-left: 50px;
-		padding-right: 50px;
+#body{
+	padding:15px;
+}
+.video{
+	display:grid;
+	grid-template-columns:900px auto;
+}
+#video{
+	height:500px;
+	background:#dddddd90;
+	overflow:hidden;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+#video > div{
+	color:#333;
+	font-size:25px;
+	border:solid 2px #26bee2;
+	padding:10px;
+	background:linear-gradient(to right,#26bee2 50%,transparent 50%);
+	background-size:202%;
+	background-position:99%;
+	transition:background-position 0.15s;
+	cursor:pointer;
+}
+#video > div:hover{
+	background-position:0;
+	color:#fff;
+}
+#videoDes{
+	overflow:auto;
+	padding:15px;
+	border:solid #666;
+	background:#26bee2;
+	border-width:0;
+	color:#fff;
+}
+h2{
+	color:#26bee2;
+	font-weight:inherit;
+	font-size:25px;
+}
+.videoContainer{
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	grid-gap:0.8em;
+}
+.videos{
+	background:#dddddd90;
+	height:calc((100vw - 0.8em*4 - 40px)/4 * 6 / 10);
+	padding:10px;
+}
+#moreInf{
+	padding:20px 0;
+	height:90px;
+}
+#moreInf a{
+	color:#26bee2;
+}
+@media only screen and (max-width:1180px){
+	.video{
+		grid-template-columns:800px auto;
 	}
-	body{
-		font-size:20px;
+	#video{
+		height:470px;
 	}
 }
-@media all and (max-width : 705px){
-	#menu,#content,#text{
-		padding-left: 20px;
-		padding-right: 20px;
+@media only screen and (max-width:1050px){
+	.video{
+		grid-template-columns:740px auto;
 	}
-	body{
-		font-size:22px;
+	#video{
+		height:450px;
 	}
 }
-media all and (min-width: 1900px){
-	*{font-size:1.3em}
-	#text{
-		font-size:3em;
+@media only screen and (max-width:900px){
+	.video{
+		grid-template-columns:1fr;
 	}
-	#menu > div a{
-		font-size:1.2em;
+	#videoDes{
+		border-width:0 2px 2px;
+		background:#fff;
+		color:#444;
+	}
+	.videoContainer{
+		grid-template-columns:repeat(3,1fr);
+	}
+	.videos{
+		height:calc((100vw - 0.8em*4 - 30px)/3 * 6 / 10);
+	}
+}
+@media only screen and (max-width:600px){
+	.videoContainer{
+		grid-template-columns:repeat(2,1fr);
+	}
+	.videos{
+		height:calc((100vw - 0.8em*4 - 20px)/2 * 6 / 10);
 	}
 }
