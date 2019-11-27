@@ -19,7 +19,8 @@ window.onload = function(){
 	ajax.open("GET","https://vandung2kk2.github.io/Dictionary/Maps/A.txt",true);
 	ajax.onreadystatechange = function(){
 		if (this.readyState == 4 && this.status == 200) {
-			console.log(this.responseText);
+			let arr = JSON.parse(ajax.responseText);
+			console.log(arr)
 		}
 	}
 	ajax.send();
