@@ -8,6 +8,7 @@ window.onload = function(){
 		ajax.onreadystatechange = function(){
 			if (this.readyState == 4 && this.status == 200) {
 				autofill = JSON.parse(ajax.responseText);
+				console.log(autofill)
 			}
 		}
 		ajax.send();
