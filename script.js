@@ -14,11 +14,13 @@ function autoFill(){
 		}
 	}
 }
-var ajax = new XMLHttpRequest();
-ajax.onreadystatechange = function(){
-	if (this.readyState == 4 && this.status == 200) {
-		console.log(this.responseText);
+window.onload = function(){
+	var ajax = new XMLHttpRequest();
+	ajax.open("GET","https://github.com/vandung2kk2/vandung2kk2.github.io/blob/master/Dictionary/Maps/A.txt",true);
+	ajax.onreadystatechange = function(){
+		if (this.readyState == 4 && this.status == 200) {
+			console.log(this.responseText);
+		}
 	}
+	ajax.send();
 }
-ajax.open("GET","http://vandung.com",true);
-ajax.send();
