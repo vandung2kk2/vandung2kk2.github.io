@@ -1,0 +1,44 @@
+/*@import url('https://github.com/vandung2kk2/fonts/blob/master/GMV%20Din%20Pro/GMV-Din-Pro');*/
+body{
+	font-size:20px;
+	margin:0;
+	padding:0;
+}
+*{
+	font-family:"Ubuntu Mono";
+	color:#33333c;
+}
+#inp{
+	position:absolute;
+	top:calc(50% - 60px);
+	left:calc(50% - 250px);
+}
+input{
+	padding:15px;
+	border-radius:4px;
+	border:0;
+	outline:none;
+	font-size:20px;
+	min-width: 500px;
+	box-shadow:1px 1px 7px rgba(0,0,0,.1);
+}
+input::placeholder{
+	color:#ccc;
+}
+.autofill{
+	position:absolute;
+	list-style-type:none;
+	padding:0;
+	background:#fff;
+	width:100%;
+	border-radius:4px;
+	overflow:hidden;
+}
+.autofill .items{
+	margin:0;
+	padding:15px;
+}
+.autofill .items:hover{
+	background:#f2f2f2;
+	cursor:pointer;
+}
