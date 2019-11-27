@@ -16,7 +16,7 @@ function autoFill(){
 }
 window.onload = function(){
 	var ajax = new XMLHttpRequest();
-	ajax.open("GET","https://github.com/vandung2kk2/vandung2kk2.github.io/blob/master/Dictionary/Maps/A.txt",true);
+	ajax.open("GET","https://vandung2kk2.github.io/Dictionary/Maps/A.txt",true);
 	ajax.onreadystatechange = function(){
 		if (this.readyState == 4 && this.status == 200) {
 			console.log(this.responseText);
