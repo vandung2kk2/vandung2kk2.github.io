@@ -1,5 +1,6 @@
 window.onload = function(){
 	var autofill;
+	var len;
 	var obj = document.getElementById("search");
 	var add = document.getElementById("more");
 	function getWords(){
@@ -8,6 +9,7 @@ window.onload = function(){
 		ajax.onreadystatechange = function(){
 			if (this.readyState == 4 && this.status == 200) {
 				autofill = JSON.parse(ajax.responseText);
+				len = autofill.length;
 				console.log(autofill)
 			}
 		}
@@ -16,7 +18,6 @@ window.onload = function(){
 	obj.addEventListener("keyup",autoFill);
 	function autoFill(){
 		if(!autofill) getWords();
-		var len=autofill.length;
 		add.innerHTML = "";
 		let val = obj.value.toLowerCase();
 		let number=0;
