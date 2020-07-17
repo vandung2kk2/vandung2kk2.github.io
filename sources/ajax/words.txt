@@ -1,3 +1,0 @@
-{
-	"word":["sedentary","abundant","adequate","convene"]
-}
