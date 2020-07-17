@@ -1,0 +1,17 @@
+*{
+	font-family:"segoe ui";
+	font-style:italic;
+	font-size:20px;
+	color:#33333c;
+}
+body{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+#words{
+	font-size:3em;
+}
+.active{
+	color:#00aaff !important;
+}
