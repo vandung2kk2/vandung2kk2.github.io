@@ -15,6 +15,12 @@
 		"have the makings of sth", "latch on", "convey", "humble",
 		"arrogant", "timid", "Resolve", "determination",
 		"Endorse", "on the tip of tongue", "expedition", "decency",
-		"strive to do sth"
+		"strive to do sth", "bear a (strong) resemblance to sb/sth",
+		"A storm in a tea cup", "sympton", "sympton","(be) in the red/black", "quash", "suspend", "setback", "diagnosis", "diagnose",
+		"critical", "ventilator", "lockdown", "laud", "intense",
+		"(be) shaken to the core", "reveal", "descend from sth",
+		"abscond", "reputation", "abduct = kidnap", "subsidiary",
+		"framework", "inelastic", "debtor", "induce", "stalk", "conspiracy", "shallow", "suffer defeat", "enchanted",
+		"punctual", "pathway", "ambitious", "nowhere near"
 	]
 }
