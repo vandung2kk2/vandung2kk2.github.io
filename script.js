@@ -1,6 +1,5 @@
 var words = document.getElementById("words"),
 	meanings = document.getElementById("meanings");
-document.write("...");
 var dictionary = new XMLHttpRequest();
 window.onload = function(){
 	let wordsList = [];
