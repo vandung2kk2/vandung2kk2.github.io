@@ -7,9 +7,9 @@ window.onload = function(){
 	let pos = 0;
 	let status = false;
 	function wordsCreator(list){
-		let res = new Array(5);
+		let res = [];
 		let len = list.length;
-		for(let i=0;i<5;i++){
+		for(let i=0;i<len;i++){
 			res[i] = list[Math.floor(Math.random()*len)];
 		}
 		console.log(res);
@@ -21,14 +21,13 @@ window.onload = function(){
 			wordsList = wordsCreator(JSON.parse(this.responseText).words);
 			status = true;
 			showWord();
-			document.addEventListener("keydown",showWord)
+			document.addEventListener("click",showWord)
 		}
 	}
 	dictionary.send();
 	function showWord(k){
-		if(status && pos<5){
+		if(status){
 			words.innerText = wordsList[pos];
-			pos++;
 		}
 	}
 }
