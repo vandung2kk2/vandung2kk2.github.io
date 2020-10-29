@@ -1,6 +1,6 @@
 var words = document.getElementById("words"),
 	meanings = document.getElementById("meanings");
-document.write("hehe");
+document.write("...");
 var dictionary = new XMLHttpRequest();
 window.onload = function(){
 	let wordsList = [];
@@ -24,20 +24,10 @@ window.onload = function(){
 		}
 	}
 	dictionary.send();
-	function showWord(k){
+	function showWord(){
 		if(status){
 			words.innerText = wordsList[pos];
+                        pos++
 		}
 	}
 }
-
-
-/*function sequenceElement(a, n) {
-    n %= 4686
-    while(n-- - 4 > 0){
-        var [b,c,d,e,f] = a 
-        a = [c,d,e,f,(b+c+d+e+f)%10]
-    }
-    return a[n+1]
-}
-console.log(sequenceElement([8, 2, 6, 5, 0],531931716));*/
