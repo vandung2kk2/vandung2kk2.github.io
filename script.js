@@ -1,6 +1,6 @@
 var words = document.getElementById("words"),
 	meanings = document.getElementById("meanings");
-
+document.write("hehe");
 var dictionary = new XMLHttpRequest();
 window.onload = function(){
 	let wordsList = [];
@@ -12,7 +12,6 @@ window.onload = function(){
 		for(let i=0;i<len;i++){
 			res[i] = list[Math.floor(Math.random()*len)];
 		}
-		console.log(res);
 		return res;
 	}
 	dictionary.open("GET","https://vandung2kk2.github.io/sources/dictionary/flashcards.txt");
