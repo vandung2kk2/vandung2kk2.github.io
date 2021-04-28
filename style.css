@@ -89,3 +89,8 @@ ul li::before {
   width: 20px;
   margin-left: -16px;
 }
+@media all and (max-width:800px){
+	#container{
+		width:auto;
+	}
+}
